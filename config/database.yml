@@ -24,7 +24,6 @@ default: &default
 development:
   <<: *default
   database: budget_app_development
-  url: postgres://cynbqyzgkkolyw:d70c53fbbc0851a1a1e0bb3f9d1f1dd5553bc816107a18037100f23ef8f5104c@ec2-34-206-148-196.compute-1.amazonaws.com:5432/dd8o8js2aq3t17
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -59,7 +58,6 @@ development:
 test:
   <<: *default
   database: budget_app_test
-  url: postgres://cynbqyzgkkolyw:d70c53fbbc0851a1a1e0bb3f9d1f1dd5553bc816107a18037100f23ef8f5104c@ec2-34-206-148-196.compute-1.amazonaws.com:5432/dd8o8js2aq3t17
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

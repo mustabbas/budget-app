@@ -9,5 +9,4 @@ class Category < ApplicationRecord
     transacs.each { |transac| result += transac.amount }
     result
   end
-  
 end

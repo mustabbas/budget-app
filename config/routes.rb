@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get 'home/index'
-  root :to => "category#index"
+  root :to => "splash#index"
   get "/category/", to: "category#index", as: "all_category"
   get "/category/show/:id", to: "category#show", as: "category_show"
   get "/category/new", to: "category#new", as: "new_category"

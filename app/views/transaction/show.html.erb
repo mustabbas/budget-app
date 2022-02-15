@@ -1,9 +1,27 @@
 
-<div class ="p-2 text-end"><%= link_to 'Add Transaction', new_transaction_path %></div>
+   <%= render "shared/header" %>
+<div class = "bg-light">
+<div class ="bg-primary p-2  d-flex justify-content-end align-items-center">
+  <p class ="mx-5 text_white">Most Recent</p>
+   <p class ="text_white">Most ancent</p>
+</div>
 <% @transaction.each do |transaction| %>
-  <div class="row border m-5 p-5">
-     <div class="col-4">
-            <h1><%= transaction.name %></h1>
-     </div>
+  <div class="row border my-3 mx-2 p-3 bg-white">
+     <div class="col-3">
+      <img src=<%= transaction.name %> alt="" class="m-1 img-fluid rounded-1">
+    </div>
+    <div class="col-6">
+      <p class="category-name"><%= transaction.name %></p>
+      <span class="date"><%= transaction.created_at %></span>
+    </div>
+    <div class="col-3">
+      <span class="amount">$<%= transaction.amount %></span>
+    </div>
   </div>
   <% end %>
+  <div class="bottom-container position-fixed bottom-0 w-100">
+  <div class="inner-bottom-container text-center">
+    <%= link_to "NEW TRANSACTION", new_transaction_path, class: "bottom-btn" %>
+  </div>
+</div>
+  </div>

@@ -1,4 +1,5 @@
 class TransactionController < ApplicationController
+  before_action :authenticate_user!
     def index
         @transaction = Transac.find(params[:id])
     end

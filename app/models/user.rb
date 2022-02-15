@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :category
   has_many :trans
-  validates :name, presence: true
+  validates :fullname, presence: true
 end

@@ -1,6 +1,6 @@
-# Recipe
+# Budget App
 
-The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
+This project for managment budget. It was build for a Capstone Project for the Microverse Ruby on Rails module.
 
 ## Built With
 
@@ -27,7 +27,7 @@ Download the ZIP from this [Link](https://github.com/mustabbas/budget-app.git), 
 - run `db:migrate`
 - Use `rails s `to run the program
 
-## Authors
+## Author
 
 👤 **MUSTAFA ABBAS**
 
@@ -44,6 +44,9 @@ Feel free to check the [issues page](https://github.com/mustabbas/budget-app/iss
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+I would like to thank the designer who design this website [ Gregoire Vella on Behance,](https://www.behance.net/gregoirevella),
 
 ## 📝 License
 

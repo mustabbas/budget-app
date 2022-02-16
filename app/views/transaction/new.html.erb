@@ -1,0 +1,14 @@
+<div class = "container bg-light">
+<h6 class ="text-center m-3">New transaction</h6>
+<%= form_with model: @transaction, url: create_transaction_path do |form| %>
+  <%= form.text_field :name, placeholder: 'name', class: 'form-control mb-3' %>
+  <%= form.number_field :amount, placeholder: 'amount', class: 'form-control mb-3' %>
+   <% @categories.each do |category| %>
+      <%= label_tag category.name %>
+      <%= check_box_tag "categories[#{category.id}]", category.name %>
+      <br />
+    <% end %>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+  <%= form.submit "Submit", class: 'form-control btn btn-primary' %>
+<% end %>
+</div>

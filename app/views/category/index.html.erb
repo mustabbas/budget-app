@@ -1,0 +1,28 @@
+<%= render "shared/header" %>
+<div class = "bg-light">
+<div class ="bg-primary p-2  d-flex justify-content-end align-items-center">
+  <p class ="mx-5 text_white">Most Recent</p>
+   <p class ="text_white">Most ancent</p>
+</div>
+<% @category.each do |category| %>
+<%= link_to transaction_show_path(category.id) do %>
+  <div class="row border my-3 mx-2 p-3 bg-white">
+     <div class="col-3">
+       <img src=<%= category.icon %> alt="Category Icon" class="m-1 img-fluid rounded-1">
+    </div>
+    <div class="col-6">
+      <p class="category-name"><%= category.name %></p>
+      <span class="date"><%= category.created_at %></span>
+    </div>
+    <div class="col-3">
+      <span class="amount">$<%= category.amount %></span>
+    </div>
+  </div>
+   <% end %>
+  <% end %>
+  <div class="bottom-container position-fixed bottom-0 w-100">
+  <div class="inner-bottom-container text-center">
+    <%= link_to "NEW CATEGORY", new_category_path, class: "bottom-btn" %>
+  </div>
+</div>
+  </div>

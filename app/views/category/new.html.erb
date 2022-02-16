@@ -1,0 +1,9 @@
+<div class = "container bg-light">
+<h6 class ="text-center m-3">New category</h6>
+<%= form_with model: @category, url: create_category_path do |form| %>
+  <%= form.text_field :name, placeholder: 'name', class: 'form-control mb-3' %>
+  <%= form.text_field :icon, placeholder: 'icon', class: 'form-control mb-3' %>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+  <%= form.submit "Submit", class: 'form-control btn btn-primary' %>
+<% end %>
+</div>
